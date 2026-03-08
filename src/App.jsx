@@ -474,13 +474,13 @@ export default function App() {
 
                 <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                   <div className="rounded-3xl bg-slate-900 p-5 text-white">
-                    <p className="text-sm text-white/70">Ideal para</p>
-                    <p className="mt-2 text-lg font-bold">Entre clases</p>
+                    <p className="text-sm text-white/70">Ideal for</p>
+                    <p className="mt-2 text-lg font-bold">Take Away</p>
                   </div>
 
                   <div className="rounded-3xl bg-emerald-50 p-5 text-emerald-800">
-                    <p className="text-sm text-emerald-700">Beneficio</p>
-                    <p className="mt-2 text-lg font-bold">Trae tu termo ♻</p>
+                    <p className="text-sm text-emerald-700">Benefit</p>
+                    <p className="mt-2 text-lg font-bold">Bring your containers ♻</p>
                   </div>
                 </div>
               </div>

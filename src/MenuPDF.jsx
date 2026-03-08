@@ -212,7 +212,8 @@ export default function MenuPDF({
         ))}
 
         <Text style={styles.footer}>
-          Menú generado automáticamente
+          At this café, we believe that small changes make a big difference.
+          If you bring your own containers, you reduce waste and get a special price on your purchases.
         </Text>
       </Page>
     </Document>
