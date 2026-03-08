@@ -189,7 +189,7 @@ export default function MenuPDF({
                       </View>
 
                       <View style={styles.priceRow}>
-                        <Text style={styles.priceLabel}>Para llevar</Text>
+                        <Text style={styles.priceLabel}>Take Away</Text>
                         <Text style={styles.priceValue}>
                           ${product.priceToGo || "--"}
                         </Text>
@@ -197,7 +197,7 @@ export default function MenuPDF({
 
                       {product.ecoDiscount && (
                         <View style={[styles.priceRow, styles.ecoRow]}>
-                          <Text style={styles.priceLabel}>Trae tu termo ♻</Text>
+                          <Text style={styles.priceLabel}>Bring your containers ♻</Text>
                           <Text style={styles.priceValue}>
                             ${product.priceEco || "--"}
                           </Text>
