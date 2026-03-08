@@ -10,126 +10,255 @@ import {
 
 const styles = StyleSheet.create({
   page: {
-    padding: 28,
-    fontSize: 11,
-    fontFamily: "Helvetica",
-    backgroundColor: "#fffdf8",
-    color: "#1e293b",
-  },
-  header: {
-    marginBottom: 20,
-    padding: 18,
-    borderRadius: 12,
-    backgroundColor: "#f1f5f9",
-  },
-  brandName: {
-    fontSize: 26,
-    fontWeight: 700,
-    marginBottom: 6,
-  },
-  tagline: {
-    fontSize: 13,
-    marginBottom: 8,
-    color: "#334155",
-  },
-  message: {
+    paddingTop: 26,
+    paddingBottom: 24,
+    paddingHorizontal: 24,
     fontSize: 10,
-    lineHeight: 1.5,
-    color: "#475569",
+    fontFamily: "Helvetica",
+    backgroundColor: "#fffaf4",
+    color: "#1f2937",
   },
-  categoryBlock: {
-    marginBottom: 18,
-  },
-  categoryTitle: {
-    fontSize: 16,
-    fontWeight: 700,
+
+  topAccent: {
+    height: 10,
+    backgroundColor: "#f59e0b",
+    borderRadius: 8,
     marginBottom: 10,
-    paddingBottom: 6,
-    borderBottomWidth: 1,
-    borderBottomColor: "#cbd5e1",
   },
-  productGrid: {
-    display: "flex",
+
+  header: {
+    backgroundColor: "#fff1dc",
+    borderRadius: 18,
+    paddingVertical: 18,
+    paddingHorizontal: 18,
+    marginBottom: 18,
+    borderWidth: 1,
+    borderColor: "#f5d9a8",
+  },
+
+  brandRow: {
     flexDirection: "row",
-    flexWrap: "wrap",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
     gap: 10,
   },
-  card: {
-    width: "48%",
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: "#e2e8f0",
-    borderRadius: 12,
-    overflow: "hidden",
+
+  brandLeft: {
+    width: "72%",
+  },
+
+  brandRight: {
+    width: "24%",
     backgroundColor: "#ffffff",
+    borderRadius: 14,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: "#f3e8d7",
   },
+
+  badgeSmall: {
+    fontSize: 8,
+    textTransform: "uppercase",
+    color: "#b45309",
+    marginBottom: 5,
+    letterSpacing: 1,
+  },
+
+  brandName: {
+    fontSize: 24,
+    fontWeight: 700,
+    color: "#111827",
+    marginBottom: 5,
+  },
+
+  tagline: {
+    fontSize: 12,
+    color: "#374151",
+    marginBottom: 8,
+    lineHeight: 1.4,
+  },
+
+  message: {
+    fontSize: 9,
+    color: "#6b7280",
+    lineHeight: 1.5,
+  },
+
+  rightCardTitle: {
+    fontSize: 8,
+    textTransform: "uppercase",
+    color: "#16a34a",
+    marginBottom: 4,
+    letterSpacing: 1,
+  },
+
+  rightCardText: {
+    fontSize: 10,
+    fontWeight: 700,
+    color: "#166534",
+    lineHeight: 1.4,
+  },
+
+  sectionDivider: {
+    marginBottom: 12,
+  },
+
+  categoryHeader: {
+    backgroundColor: "#1f2937",
+    borderRadius: 14,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    marginBottom: 10,
+  },
+
+  categoryTitle: {
+    fontSize: 13,
+    fontWeight: 700,
+    color: "#ffffff",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+  },
+
+  categoryCount: {
+    fontSize: 8,
+    color: "#d1d5db",
+    marginTop: 2,
+  },
+
+  categoryBlock: {
+    marginBottom: 16,
+  },
+
+  productGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+
+  card: {
+    width: "48.3%",
+    marginBottom: 12,
+    backgroundColor: "#ffffff",
+    borderRadius: 16,
+    overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "#efe7dc",
+  },
+
   imageBox: {
-    height: 120,
-    backgroundColor: "#ecfeff",
-    alignItems: "center",
+    height: 105,
+    backgroundColor: "#f8fafc",
     justifyContent: "center",
+    alignItems: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "#f1f5f9",
   },
+
   productImage: {
     width: "100%",
     height: "100%",
     objectFit: "cover",
   },
+
   imagePlaceholder: {
-    fontSize: 10,
-    color: "#64748b",
+    fontSize: 9,
+    color: "#94a3b8",
   },
+
   cardBody: {
     padding: 10,
   },
-  productCategory: {
-    fontSize: 8,
+
+  categoryPill: {
+    alignSelf: "flex-start",
+    backgroundColor: "#ecfeff",
+    color: "#0f766e",
+    fontSize: 7,
     textTransform: "uppercase",
-    color: "#0891b2",
+    paddingVertical: 3,
+    paddingHorizontal: 6,
+    borderRadius: 999,
+    marginBottom: 6,
+  },
+
+  productName: {
+    fontSize: 12,
+    fontWeight: 700,
+    color: "#111827",
     marginBottom: 4,
   },
-  productName: {
-    fontSize: 13,
-    fontWeight: 700,
-    marginBottom: 5,
-  },
+
   productDescription: {
-    fontSize: 9,
-    color: "#475569",
-    lineHeight: 1.4,
+    fontSize: 8.7,
+    color: "#6b7280",
+    lineHeight: 1.45,
+    minHeight: 28,
     marginBottom: 8,
   },
+
   priceBox: {
-    borderWidth: 1,
-    borderColor: "#e2e8f0",
-    borderRadius: 10,
+    backgroundColor: "#faf7f2",
+    borderRadius: 12,
     padding: 8,
-    backgroundColor: "#f8fafc",
+    borderWidth: 1,
+    borderColor: "#f0e6d8",
   },
+
   priceRow: {
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 4,
+    alignItems: "center",
+    marginBottom: 5,
   },
+
   priceLabel: {
-    fontSize: 9,
-    color: "#475569",
+    fontSize: 8.5,
+    color: "#6b7280",
   },
+
   priceValue: {
-    fontSize: 10,
+    fontSize: 9.5,
     fontWeight: 700,
+    color: "#111827",
   },
+
   ecoRow: {
-    marginTop: 4,
+    marginTop: 2,
     paddingTop: 6,
     borderTopWidth: 1,
     borderTopColor: "#d1fae5",
   },
+
+  ecoLabel: {
+    fontSize: 8.5,
+    color: "#15803d",
+    fontWeight: 700,
+  },
+
+  ecoValue: {
+    fontSize: 9.5,
+    color: "#166534",
+    fontWeight: 700,
+  },
+
+  footerBox: {
+    marginTop: 8,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: "#eadfce",
+  },
+
   footer: {
-    marginTop: 18,
-    fontSize: 9,
-    color: "#64748b",
+    fontSize: 8.5,
+    color: "#6b7280",
     textAlign: "center",
+    lineHeight: 1.5,
+  },
+
+  footerHighlight: {
+    color: "#15803d",
+    fontWeight: 700,
   },
 });
 
@@ -139,6 +268,8 @@ export default function MenuPDF({
   brandMessage,
   groupedProducts,
 }) {
+  const entries = Object.entries(groupedProducts);
+
   return (
     <Document
       title={brandName}
@@ -147,15 +278,34 @@ export default function MenuPDF({
       keywords="menu,cafeteria,snacks,bebidas,pdf"
     >
       <Page size="A4" style={styles.page}>
+        <View style={styles.topAccent} />
+
         <View style={styles.header}>
-          <Text style={styles.brandName}>{brandName}</Text>
-          <Text style={styles.tagline}>{brandTagline}</Text>
-          <Text style={styles.message}>{brandMessage}</Text>
+          <View style={styles.brandRow}>
+            <View style={styles.brandLeft}>
+              <Text style={styles.badgeSmall}>Student coffee menu</Text>
+              <Text style={styles.brandName}>{brandName}</Text>
+              <Text style={styles.tagline}>{brandTagline}</Text>
+              <Text style={styles.message}>{brandMessage}</Text>
+            </View>
+
+            <View style={styles.brandRight}>
+              <Text style={styles.rightCardTitle}>Eco price</Text>
+
+            </View>
+          </View>
         </View>
 
-        {Object.entries(groupedProducts).map(([category, items]) => (
-          <View key={category} style={styles.categoryBlock}>
-            <Text style={styles.categoryTitle}>{category}</Text>
+        {entries.map(([category, items]) => (
+          <View key={category} style={styles.categoryBlock} wrap={false}>
+            <View style={styles.sectionDivider}>
+              <View style={styles.categoryHeader}>
+                <Text style={styles.categoryTitle}>{category}</Text>
+                <Text style={styles.categoryCount}>
+                  {items.length} product{items.length > 1 ? "s" : ""}
+                </Text>
+              </View>
+            </View>
 
             <View style={styles.productGrid}>
               {items.map((product) => (
@@ -164,20 +314,19 @@ export default function MenuPDF({
                     {product.image ? (
                       <Image src={product.image} style={styles.productImage} />
                     ) : (
-                      <Text style={styles.imagePlaceholder}>
-                        Sin imagen
-                      </Text>
+                      <Text style={styles.imagePlaceholder}>No image</Text>
                     )}
                   </View>
 
                   <View style={styles.cardBody}>
-                    <Text style={styles.productCategory}>{product.category}</Text>
+                    <Text style={styles.categoryPill}>{product.category}</Text>
+
                     <Text style={styles.productName}>
-                      {product.name || "Producto sin nombre"}
+                      {product.name || "Unnamed product"}
                     </Text>
 
                     <Text style={styles.productDescription}>
-                      {product.description || "Sin descripción"}
+                      {product.description || "No description available."}
                     </Text>
 
                     <View style={styles.priceBox}>
@@ -197,8 +346,10 @@ export default function MenuPDF({
 
                       {product.ecoDiscount && (
                         <View style={[styles.priceRow, styles.ecoRow]}>
-                          <Text style={styles.priceLabel}>Bring your containers ♻</Text>
-                          <Text style={styles.priceValue}>
+                          <Text style={styles.ecoLabel}>
+                            Bring your containers
+                          </Text>
+                          <Text style={styles.ecoValue}>
                             ${product.priceEco || "--"}
                           </Text>
                         </View>
@@ -211,10 +362,15 @@ export default function MenuPDF({
           </View>
         ))}
 
-        <Text style={styles.footer}>
-          At this café, we believe that small changes make a big difference.
-          If you bring your own containers, you reduce waste and get a special price on your purchases.
-        </Text>
+        <View style={styles.footerBox}>
+          <Text style={styles.footer}>
+            At this café, we believe that small changes make a big difference.{" "}
+            <Text style={styles.footerHighlight}>
+              Bring your own containers
+            </Text>{" "}
+            to reduce waste and enjoy a special price on your purchases.
+          </Text>
+        </View>
       </Page>
     </Document>
   );
