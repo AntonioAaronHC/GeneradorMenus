@@ -27,24 +27,28 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    backgroundColor: "#fff1dc",
-    borderRadius: 18,
-    paddingVertical: 18,
-    paddingHorizontal: 18,
-    marginBottom: 18,
-    borderWidth: 1,
-    borderColor: "#f5d9a8",
-  },
+  backgroundColor: "#fff1dc",
+  borderRadius: 18,
+  paddingVertical: 18,
+  paddingHorizontal: 18,
+  marginBottom: 18,
+  borderWidth: 1,
+  borderColor: "#f5d9a8",
+  flexShrink: 0,
+  minHeight: 105,
+},
 
   brandRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
     gap: 10,
+    flexShrink: 0,
   },
 
   brandLeft: {
     width: "72%",
+    flexShrink: 0,
   },
 
   brandRight: {
@@ -55,6 +59,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderWidth: 1,
     borderColor: "#f3e8d7",
+    flexShrink: 0,
   },
 
   badgeSmall: {
@@ -105,12 +110,15 @@ const styles = StyleSheet.create({
   },
 
   categoryHeader: {
-    backgroundColor: "#1f2937",
-    borderRadius: 14,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    marginBottom: 10,
-  },
+  backgroundColor: "#1f2937",
+  borderRadius: 14,
+  paddingVertical: 8,
+  paddingHorizontal: 12,
+  marginBottom: 10,
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+},
 
   categoryTitle: {
     fontSize: 13,
@@ -146,20 +154,32 @@ const styles = StyleSheet.create({
     borderColor: "#efe7dc",
   },
 
-  imageBox: {
-    height: 105,
-    backgroundColor: "#f8fafc",
-    justifyContent: "center",
-    alignItems: "center",
-    borderBottomWidth: 1,
-    borderBottomColor: "#f1f5f9",
-  },
+imageBox: {
+  height: 95,
+  backgroundColor: "#f3f4f6",
+  position: "relative",
+  justifyContent: "center",
+  alignItems: "center",
+  overflow: "hidden",
+  borderBottomWidth: 1,
+  borderBottomColor: "#f1f5f9",
+},
 
-  productImage: {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-  },
+productImageBg: {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  opacity: 0.22,
+},
+
+productImage: {
+  width: "100%",
+  height: "100%",
+  objectFit: "contain",
+},
 
   imagePlaceholder: {
     fontSize: 9,
@@ -297,7 +317,7 @@ export default function MenuPDF({
         </View>
 
         {entries.map(([category, items]) => (
-          <View key={category} style={styles.categoryBlock} wrap={false}>
+          <View key={category} style={styles.categoryBlock}>
             <View style={styles.sectionDivider}>
               <View style={styles.categoryHeader}>
                 <Text style={styles.categoryTitle}>{category}</Text>
@@ -309,10 +329,13 @@ export default function MenuPDF({
 
             <View style={styles.productGrid}>
               {items.map((product) => (
-                <View key={product.id} style={styles.card}>
+                <View key={product.id} style={styles.card} wrap={false}>
                   <View style={styles.imageBox}>
                     {product.image ? (
-                      <Image src={product.image} style={styles.productImage} />
+                      <>
+                        <Image src={product.image} style={styles.productImageBg} />
+                        <Image src={product.image} style={styles.productImage} />
+                      </>
                     ) : (
                       <Text style={styles.imagePlaceholder}>No image</Text>
                     )}
