@@ -357,10 +357,10 @@ export default function App() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-slate-500">
-                  Generador sencillo
+                  Generador Menú
                 </p>
                 <h1 className="text-2xl font-black tracking-tight text-slate-900">
-                  Menú juvenil para cafetería
+                  Menú para cafetería
                 </h1>
               </div>
             </div>
@@ -392,7 +392,7 @@ export default function App() {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-slate-700">
-                  Mensaje eco / marca
+                  Mensaje marca
                 </label>
                 <textarea
                   value={brandMessage}
@@ -433,15 +433,6 @@ export default function App() {
               </PDFDownloadLink>
 
             </div>
-
-            <div className="mt-5 rounded-3xl bg-gradient-to-r from-emerald-50 to-cyan-50 p-4 text-sm text-slate-700">
-              <p className="font-semibold text-slate-900">Tip:</p>
-              <p className="mt-1 leading-6">
-                Al dar clic en <span className="font-semibold">Descargar PDF</span>,
-                usa la opción <span className="font-semibold">Guardar como PDF</span>
-                en la ventana de impresión.
-              </p>
-            </div>
           </div>
 
           <div className="space-y-4">
@@ -465,7 +456,7 @@ export default function App() {
               <div className="relative z-10 grid gap-8 lg:grid-cols-[1.25fr_0.9fr] lg:items-end">
                 <div>
                   <div className="mb-4 inline-block rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-                    Menú del día a día
+                    Menú
                   </div>
 
                   <h2 className="max-w-2xl text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
