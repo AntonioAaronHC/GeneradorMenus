@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 const categoryOptions = [
-  "Bebidas", 
+  "Drinks", 
   "Snacks",
-  "Postres",
+  "Desserts",
   "Otros",
   "Bebidas calientes",
   "Bebidas frías",
@@ -27,7 +27,7 @@ const createEmptyProduct = () => ({
   id: crypto.randomUUID(),
   name: "",
   description: "",
-  category: "Bebidas calientes",
+  category: "Drinks",
   priceRegular: "",
   priceToGo: "",
   priceEco: "",
@@ -40,7 +40,7 @@ const initialProducts = [
     id: crypto.randomUUID(),
     name: "Matcha Latte",
     description: "Cremoso, suave y perfecto para una pausa entre clases.",
-    category: "Bebidas calientes",
+    category: "Drinks",
     priceRegular: "65",
     priceToGo: "60",
     priceEco: "55",
@@ -51,7 +51,7 @@ const initialProducts = [
     id: crypto.randomUUID(),
     name: "Iced Coffee",
     description: "Refrescante y con energía para seguir el día.",
-    category: "Bebidas frías",
+    category: "Drinks",
     priceRegular: "58",
     priceToGo: "55",
     priceEco: "50",
@@ -62,7 +62,7 @@ const initialProducts = [
     id: crypto.randomUUID(),
     name: "Croissant de jamón y queso",
     description: "Snack rápido, calientito y muy práctico.",
-    category: "Snacks salados",
+    category: "Snacks",
     priceRegular: "48",
     priceToGo: "48",
     priceEco: "",
@@ -243,7 +243,7 @@ function ProductCard({ product }) {
           <div className="absolute left-4 top-4 rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white shadow">
             <span className="inline-flex items-center gap-1">
               <LeafyGreen className="h-3.5 w-3.5" />
-              Con termo ahorras
+              Pay less with your container
             </span>
           </div>
         )}
@@ -272,7 +272,7 @@ function ProductCard({ product }) {
           </div>
 
           <div className="flex items-center justify-between rounded-2xl bg-white px-3 py-2">
-            <span className="font-medium text-slate-600">Para llevar</span>
+            <span className="font-medium text-slate-600">Take Away</span>
             <span className="text-base font-black text-slate-900">
               ${product.priceToGo || "--"}
             </span>
@@ -281,7 +281,7 @@ function ProductCard({ product }) {
           {product.ecoDiscount && (
             <div className="flex items-center justify-between rounded-2xl bg-emerald-50 px-3 py-2">
               <span className="font-semibold text-emerald-700">
-                Trae tu termo ♻
+                Bring your containers ♻
               </span>
               <span className="text-base font-black text-emerald-700">
                 ${product.priceEco || "--"}
@@ -295,12 +295,12 @@ function ProductCard({ product }) {
 }
 
 export default function App() {
-  const [brandName, setBrandName] = useState("Campus Break Café");
+  const [brandName, setBrandName] = useState("Cravings Coffee");
   const [brandTagline, setBrandTagline] = useState(
-    "Snacks y bebidas con vibra estudiantil"
+    "Brewed for your cravings"
   );
   const [brandMessage, setBrandMessage] = useState(
-    "Trae tu termo y paga menos. Una pausa rica, práctica y más amigable con el planeta."
+    "Bring your reusable container. Pay less. Enjoy more. More coffee, less impact."
   );
   const [products, setProducts] = useState(initialProducts);
 
@@ -456,7 +456,7 @@ export default function App() {
               <div className="relative z-10 grid gap-8 lg:grid-cols-[1.25fr_0.9fr] lg:items-end">
                 <div>
                   <div className="mb-4 inline-block rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-                    Menú
+                    Menu
                   </div>
 
                   <h2 className="max-w-2xl text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
@@ -491,7 +491,7 @@ export default function App() {
                 <div className="rounded-[28px] border border-dashed border-slate-300 bg-slate-50 px-6 py-14 text-center">
                   <Coffee className="mx-auto h-10 w-10 text-slate-400" />
                   <h3 className="mt-4 text-2xl font-bold text-slate-800">
-                    Tu menú aparecerá aquí
+                    Menu
                   </h3>
                   <p className="mt-2 text-slate-500">
                     Agrega nombre, precios y foto a tus productos para generar la
