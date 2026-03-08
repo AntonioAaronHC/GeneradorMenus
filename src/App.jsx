@@ -16,7 +16,7 @@ const categoryOptions = [
   "Drinks", 
   "Snacks",
   "Desserts",
-  "Otros",
+  "Others",
   "Bebidas calientes",
   "Bebidas frías",
   "Snacks dulces",
